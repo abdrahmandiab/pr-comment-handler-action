@@ -12,7 +12,6 @@ jobs:
         id: fc
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body-includes: Add_checklist_here
       - run: |
           echo ${{ steps.fc.outputs.comment-id }}
           echo ${{ steps.fc.outputs.comment-body }}
