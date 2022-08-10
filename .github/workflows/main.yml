@@ -32,4 +32,5 @@ jobs:
           comment-id: ${{ steps.fc.outputs.comment-id }}
           body: |
             This comment has been updated!
+          edit-mode: replace
           reactions: hooray
