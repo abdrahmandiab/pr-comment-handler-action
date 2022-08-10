@@ -78,3 +78,12 @@ The ivy docs represent the ground truth for the task descriptions and this check
 		15. - [ ] ❌: Call the operator on two `ivy.Container` instances containing Number instances at the leaves.
 	 	16. - [ ] ❌: Call the operator on two `ivy.Container` instances containing `ivy.Array` instances at the leaves.
 	 	17. - [ ] ❌: Call the operator with an `ivy.Container` instance on the left and `ivy.Array` on the right.
+
+		**Container Reverse Operator Example**
+
+		18. - [ ] ❌: Following example in the [`ivy.Container.__radd__`](https://github.com/unifyai/ivy/blob/e28a3cfd8a4527066d0d92d48a9e849c9f367a39/ivy/container/container.py#L173) docstring, with the operator called with a `Number` on the left and an `ivy.Container` instance on the right.
+
+		**Tests**
+
+		19. - [ ] ❌: Docstring examples tests passing.
+		20. - [ ] ❌: Lint checks passing.
