@@ -13,6 +13,10 @@ jobs:
         with:
           issue-number: ${{ github.event.pull_request.number }}
           body-includes: Add_checklist_here
+      - run: |
+          echo ${{ steps.fc.outputs.comment-id }}
+          echo ${{ steps.fc.outputs.comment-body }}
+          echo ${{ steps.fc.outputs.comment-author }}
       
       #- name: Render template
       #  id: template
