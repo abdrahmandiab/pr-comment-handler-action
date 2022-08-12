@@ -6,26 +6,30 @@ on:
 jobs:
   pr_commented:
     name: PR comment
-    if: ${{ github.event.issue.pull_request && github.event.comment.body== 'Add_checklist_here' }}
+    if: ${{ github.event.issue.pull_request && github.event.comment.body == 'Add_checklist_here' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - run: |
           echo A comment on PR $NUMBER
           echo The body of comment $ID is "$BODY"
-          echo "CATEGORY=$(echo $BODY)" >> $GITHUB_ENV
         env:
           NUMBER: ${{ github.event.issue.number }}  
           BODY: ${{ github.event.comment.body }}
           ID: ${{ github.event.comment.id }}
-          
+
+      - uses: bhowell2/github-substring-action@v1.0.0
+        id: category
+        with:
+          value: ${{ github.event.comment.body }}
+          index_of_str: "Add_checklist_here_"
       - name: Render template
         id: template
         uses: chuhlomin/render-template@v1.4
         with:
           template: .github/reformat_checklist.md
           vars: |
-            category_name: ${{ env.CATEGORY }}
+            category_name: ${{ steps.category.outputs.substring }}
       
       - name: Update Comment
         uses: peter-evans/create-or-update-comment@v2.0.0
