@@ -9,6 +9,7 @@ jobs:
     if: ${{ github.event.issue.pull_request && github.event.comment.body== 'Add_checklist_here' }}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - run: |
           echo A comment on PR $NUMBER
           echo "$BODY"
@@ -22,7 +23,7 @@ jobs:
         id: template
         uses: chuhlomin/render-template@v1.4
         with:
-          template: reformat_checklist_template.md
+          template: .github/reformat_checklist.md
           vars: |
             foo: this
             bar: that
