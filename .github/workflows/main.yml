@@ -4,36 +4,13 @@ on:
   issue_comment:
     types: [created]
 jobs:
-  commentCreated:
+  pr_commented:
+    # This job only runs for pull request comments
+    name: PR comment
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
-      - name: Find Comment
-        uses: peter-evans/find-comment@v2.0.0
-        id: fc
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
       - run: |
-          echo ${{ steps.fc.outputs.comment-id }}
-          echo ${{ steps.fc.outputs.comment-body }}
-          echo ${{ steps.fc.outputs.comment-author }}
-      
-      #- name: Render template
-      #  id: template
-      #  uses: chuhlomin/render-template@v1.4
-      #  with:
-      #    template: .github/comment-template.md
-      #    vars: |
-      #      foo: this
-      #      bar: that
-            
-    # file to read from IS reformat_checklist_template.md
-      
-      - name: Update comment
-        if: steps.fc.outputs.comment-id != ''
-        uses: peter-evans/create-or-update-comment@v2.0.0
-        with:
-          comment-id: ${{ steps.fc.outputs.comment-id }}
-          body: |
-            This comment has been updated!
-          edit-mode: replace
-          reactions: hooray
+          echo A comment on PR $NUMBER
+        env:
+          NUMBER: ${{ github.event.issue.number }}
