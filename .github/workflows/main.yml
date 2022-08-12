@@ -6,7 +6,7 @@ on:
 jobs:
   pr_commented:
     name: PR comment
-    if: ${{ github.event.issue.pull_request && github.event.comment.body == 'Add_checklist_here' }}
+    if: ${{ github.event.issue.pull_request && startsWith(github.event.comment.body, 'Add_checklist_here_') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
