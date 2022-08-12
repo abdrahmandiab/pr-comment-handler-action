@@ -1,4 +1,4 @@
-#### IMPORTANT NOTICE 🚨: {{ .category_name }}.
+#### IMPORTANT NOTICE 🚨:
 The ivy docs represent the ground truth for the task descriptions and this checklist should only be used as a supplementary item to aid with the review process.
 #### LEGEND 🗺:
 ❌ :  Check item is not completed. 
@@ -10,11 +10,11 @@ The ivy docs represent the ground truth for the task descriptions and this check
 #### CHECKS 📑:
 1. - [ ] ❌:  Remove all lambda and direct bindings for the backend functions in [ivy/functional/backends](https://github.com/unifyai/ivy/tree/master/ivy/functional/backends).
 2. - [ ] ❌: Implement the following if they don't exist: 
-       1. - [ ]  ❌: The `ivy.Array` instance method in [ivy/array/category_name.py](https://github.com/unifyai/ivy/tree/master/ivy/array).
+       1. - [ ]  ❌: The `ivy.Array` instance method in [ivy/array/{{ .category_name }}.py](https://github.com/unifyai/ivy/blob/master/ivy/array/{{ .category_name }}.py).
        2. - [ ]  ❌: The `ivy.Array` special method in [ivy/array/array.py](https://github.com/unifyai/ivy/blob/master/ivy/array/array.py).
        3. - [ ]  ❌: The `ivy.Array` reverse special method in [ivy/array/array.py](https://github.com/unifyai/ivy/blob/master/ivy/array/array.py).
-       4. - [ ] ❌: The `ivy.Container` static method in [ivy/container/category_name.py](https://github.com/unifyai/ivy/tree/master/ivy/container).
-       5. - [ ] ❌: The `ivy.Container` instance method in [ivy/container/category_name.py](https://github.com/unifyai/ivy/tree/master/ivy/container).
+       4. - [ ] ❌: The `ivy.Container` static method in [ivy/container/{{ .category_name }}.py](https://github.com/unifyai/ivy/tree/master/ivy/container).
+       5. - [ ] ❌: The `ivy.Container` instance method in [ivy/container/{{ .category_name }}.py](https://github.com/unifyai/ivy/tree/master/ivy/container).
        6. - [ ]  ❌:  The `ivy.Container` special method in [ivy/container/container.py](https://github.com/unifyai/ivy/blob/master/ivy/container/container.py).
        7. - [ ]  ❌: The `ivy.Container` reverse special method in [ivy/container/container.py](https://github.com/unifyai/ivy/blob/master/ivy/container/container.py).
 3. - [ ] ❌:  Make sure that the aforementioned methods are added into the correct category-specific parent class, such as  `ivy.ArrayWithElementwise`,  `ivy.ContainerWithManipulation`  etc.
