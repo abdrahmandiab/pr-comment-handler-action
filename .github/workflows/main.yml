@@ -22,7 +22,7 @@ jobs:
         id: category
         with:
           value: ${{ github.event.comment.body }}
-          index_of_str: "Add_reformat_checklist_"
+          index_of_str: "add_reformat_checklist_"
       - name: Render template
         id: template
         uses: chuhlomin/render-template@v1.4
