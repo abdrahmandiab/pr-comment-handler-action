@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           echo A comment on PR $NUMBER
-          echo "$BODY"
-          echo $ID
+          echo The body of comment $ID is "$BODY"
+          echo "CATEGORY=$(echo $BODY)" >> $GITHUB_ENV
         env:
           NUMBER: ${{ github.event.issue.number }}  
           BODY: ${{ github.event.comment.body }}
@@ -25,8 +25,7 @@ jobs:
         with:
           template: .github/reformat_checklist.md
           vars: |
-            foo: this
-            bar: that
+            category_name: ${{ env.CATEGORY }}
       
       - name: Update Comment
         uses: peter-evans/create-or-update-comment@v2.0.0
