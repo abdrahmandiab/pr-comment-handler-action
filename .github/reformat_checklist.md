@@ -29,7 +29,7 @@ The ivy docs represent the ground truth for the task descriptions and this check
               - [ ] ❌:  Replace `out` with `ret` in the `Returns` section.
        2. - [ ] ❌:  Reference to docstring for ivy.function_name ([5.a](#ref1)) for the function description **and** modified `Parameters` and `Returns` sections as described in [the docs](https://lets-unify.ai/ivy/deep_dive/12_docstrings.html#docstrings) in:
               - [ ] ❌:  [ivy/array/{{ .category_name }}.py](https://github.com/unifyai/ivy/blob/master/ivy/array/{{ .category_name }}.py).
-              - [ ] ❌:  [ivy/container/category_name.py](https://github.com/unifyai/ivy/blob/master/ivy/container/{{ .category_name }}.py).
+              - [ ] ❌:  [ivy/container/{{ .category_name }}.py](https://github.com/unifyai/ivy/blob/master/ivy/container/{{ .category_name }}.py).
               - [ ] ❌:   [ivy/array/array.py](https://github.com/unifyai/ivy/blob/master/ivy/array/array.py) if the function has a special method  ( like `__function_name__` ).
               - [ ] ❌:  [ivy/array/array.py](https://github.com/unifyai/ivy/blob/master/ivy/array/array.py) if the function has a reverse special method  ( like `__function_name__` ).
               - [ ] ❌: [ivy/container/container.py](https://github.com/unifyai/ivy/blob/master/ivy/container/container.py) if the function has a special method ( like `__function_name__` ).
