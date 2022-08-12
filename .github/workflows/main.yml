@@ -13,6 +13,8 @@ jobs:
       - run: |
           echo A comment on PR $NUMBER
           echo "$BODY"
+          echo $ID
         env:
           NUMBER: ${{ github.event.issue.number }}  
           BODY: ${{ github.event.comment.body }}
+          ID: ${{ github.event.comment.id }}
