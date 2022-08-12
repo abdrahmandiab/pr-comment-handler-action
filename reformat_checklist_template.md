@@ -1,9 +1,9 @@
-#### IMPORTANT NOTICE 🚨: 
+#### IMPORTANT NOTICE 🚨: {{ .foo }} and {{ .bar }}.
 The ivy docs represent the ground truth for the task descriptions and this checklist should only be used as a supplementary item to aid with the review process.
 #### LEGEND 🗺:
 ❌ :  Check item is not completed. 
 ✅ :  Check item is ready for review.
-⚠ :  Stuck/Doubting implementation (PR creator should add comments explaining why).
+🆘 :  Stuck/Doubting implementation (PR creator should add comments explaining why).
 ⏩ :  Check is not applicable to function (skip).
 🆗 :  Check item is already implemented and does not require any edits.
 
