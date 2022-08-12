@@ -1,4 +1,4 @@
-#### IMPORTANT NOTICE 🚨: 
+#### IMPORTANT NOTICE 🚨: {{ .foo }} and {{ .bar }}.
 The ivy docs represent the ground truth for the task descriptions and this checklist should only be used as a supplementary item to aid with the review process.
 #### LEGEND 🗺:
 ❌ :  Check item is not completed. 
