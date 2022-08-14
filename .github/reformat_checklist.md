@@ -5,7 +5,7 @@ The ivy docs represent the ground truth for the task descriptions and this check
 #### LEGEND 🗺:
 ❌ :  Check item is not completed. 
 ✅ :  Check item is ready for review.
-🆘 :  Stuck/Doubting implementation (PR creator should add comments explaining why).
+🆘 :  Stuck/Doubting implementation (PR author should add comments explaining why).
 ⏩ :  Check is not applicable to function (skip).
 🆗 :  Check item is already implemented and does not require any edits.
 
