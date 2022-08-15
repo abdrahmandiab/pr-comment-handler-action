@@ -34,7 +34,7 @@ jobs:
       - name: Update Comment
         uses: peter-evans/create-or-update-comment@v2.0.0
         with:
-          token: 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
+          token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.issue.number }}
           comment-id: ${{ github.event.comment.id }}
           body: ${{ steps.template.outputs.result }}
